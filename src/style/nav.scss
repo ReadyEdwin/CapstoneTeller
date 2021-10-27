@@ -1,0 +1,12 @@
+.nav-wrapper {
+    margin-top: 22px;
+
+    a {
+        margin: 10px;
+        color: rgb(109, 70, 21);
+    }
+
+    a.active {
+        text-decoration: underline;
+    }
+}
