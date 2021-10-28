@@ -5,6 +5,8 @@ import Nav from "./nav"
 import Home from "./pages/home"
 import Items from "./pages/items"
 import AddItem from "./pages/add-item"
+import Fortune from "./pages/fortune"
+
 
 
 export default class App extends Component {
@@ -15,7 +17,8 @@ export default class App extends Component {
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/fortunes" component={Items} />
+          <Route path="/fortune" component={Fortune} />
+
           <Route path="/add-item" component={AddItem} />
         </Switch>
       </div>

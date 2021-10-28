@@ -6,7 +6,6 @@ export default class AddItem extends Component {
 
         this.state = {
             nameInput: "",
-            priceInput: "",
             loading: false,
             error: false
         }
@@ -27,7 +26,7 @@ export default class AddItem extends Component {
             error: false
         })
 
-        fetch("https://capstone-example-backend.herokuapp.com/item/add", {
+        fetch("", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({
@@ -54,19 +53,19 @@ export default class AddItem extends Component {
     render() {
         return (
             <div className='add-item-wrapper'>
-                <h2>Add Item</h2>
+                <h2>Add Fortune</h2>
 
                 <form onSubmit={this.handleSubmit}>
                     <input 
                         type="text" 
-                        placeholder="name"
+                        placeholder="fortune"
                         name="nameInput" 
                         value={this.state.nameInput}
                         onChange={this.handleChange}
                     />
 
     
-                    <button type="submit" disabled={this.state.loading}>Add Item</button>
+                    <button type="submit" disabled={this.state.loading}>Add Fortune</button>
                 </form>
 
                 {this.state.loading ? <div className="loading">Submitting...</div> : null}

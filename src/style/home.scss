@@ -4,12 +4,40 @@
         justify-content: space-between;
 
         a {
-            border: 1px solid black;
             border-radius: 5px;
             padding: 10px;
             width: 135px;
             text-align: center;
-            background-color: white;
+            
         }
     }
+
+    button {
+        font-size: 18px;
+        padding: 15px 20px;
+        margin-top: 40px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 2px 2px 12px rgba(0,0,0,.2);
+        transition: transform .3s;
+    }
+    
+    button:hover {
+        transform: scale(1.125);
+    }
+    
+    @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .fade-animation {
+        animation: fade .5s;
+    }
+    
 }
