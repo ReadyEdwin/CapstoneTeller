@@ -29,7 +29,7 @@ componentDidMount() {
     .then(data => {
       this.setState({
         loading: false,
-        fortunes: data.fortune, //check how the data is coming from api and add the variable here if  fortunes list `if data.fortunes` then add data.fortunes here 
+        fortunes: data.fortune,  
         error: false
       }, this.getFortune)
     })

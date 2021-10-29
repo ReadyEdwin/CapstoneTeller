@@ -16,6 +16,12 @@ export default function Home() {
             </div>
         </div>
     );
+
+    function darkmode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+
     componentDidMount(); {
         this.getFortune();
     }
