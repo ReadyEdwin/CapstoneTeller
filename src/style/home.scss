@@ -39,5 +39,15 @@
     .fade-animation {
         animation: fade .5s;
     }
+
+    .fortune-text {
+        font-size: 30px;
+        font-weight: bolder;
+    }
+
+    .dark-mode {
+        background-color: black;
+        color: white;
+    }
     
 }

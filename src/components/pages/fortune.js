@@ -60,7 +60,9 @@ render() {
             
             
         </div>
+        <div className="fortune-text">
         <h5>{this.state.fortune}</h5>
+        </div>
         </body>
     )
 }
