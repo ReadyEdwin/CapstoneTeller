@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import Fortune  from "./fortune"
+import App from "../app"
+
 
 export default function Home() {
 
@@ -12,7 +14,8 @@ export default function Home() {
 
            <Link to="fortune"> <button onClick={Fortune.getFortune}>Get Fortune</button></Link>
                 <Link to="/add-fortune"><button>Add Fortune</button></Link>
-                <button onclick="darkmode()">Toggle dark mode</button>
+                
+               
             </div>
         </div>
     );
