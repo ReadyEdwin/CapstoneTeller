@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class AddItem extends Component {
+export default class AddFortune extends Component {
     constructor(props) {
         super(props)
 
@@ -26,22 +26,21 @@ export default class AddItem extends Component {
             error: false
         })
 
-        fetch("", {
+        fetch("https://backend-edwin.herokuapp.com/item/add", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({
-                name: this.state.nameInput,
-                price: parseFloat(this.state.priceInput)
+                name: this.state.nameInput
             })
         })
         .then(response => response.json())
         .then(data => {
             if (data.id) {
-                this.props.history.push("/items")
+                this.props.history.push("/fortune")
             }
         })
         .catch(error => {
-            console.log("Error adding item ", error)
+            console.log("Error adding fortune ", error)
 
             this.setState({
                 loading: false,

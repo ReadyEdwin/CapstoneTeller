@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom"
 
 class Fortune extends React.Component {
 constructor(props) {
@@ -17,16 +16,33 @@ constructor(props) {
             "Maybe a nap is what you need",
             "Don't Text Your EX!"
         ],
-        fortune: ""
+        fortune: ''
     }
 }
 
 componentDidMount() {
-    this.getFortune();
-}
-
+    fetch("https://backend-edwin.herokuapp.com/item", {
+        method: "GET",
+        headers: { "content-type": "application/json" },
+    })
+    .then(response => response.json())
+    .then(data => {
+      this.setState({
+        loading: false,
+        fortunes: data.fortune, //check how the data is coming from api and add the variable here if  fortunes list `if data.fortunes` then add data.fortunes here 
+        error: false
+      }, this.getFortune)
+    })
+    .catch(error => {
+        console.log("Error fetching fortune ", error)
+        this.setState({
+            loading: false,
+            error: true
+        })
+    })
+  }
 getFortune = () =>  {
-    let rand = Math.floor(Math.random() * (this.state.fortunes.length) + 0)
+    let rand = Math.floor(Math.random() * (this.state.fortunes.length - 1) + 0)
     console.log(rand);
     this.setState({
         fortune: this.state.fortunes[rand]
@@ -49,7 +65,4 @@ render() {
     )
 }
 }
-
-console.log('getFortune');
-
-export default Fortune; 
+export default Fortune

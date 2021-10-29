@@ -11,7 +11,7 @@ export default function Home() {
         <div className="home-buttons-wrapper">
 
            <Link to="fortune"> <button onClick={Fortune.getFortune}>Get Fortune</button></Link>
-                <Link to="/add-item"><button>Add Fortune</button></Link>
+                <Link to="/add-fortune"><button>Add Fortune</button></Link>
             </div>
         </div>
     );
