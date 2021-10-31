@@ -1,7 +1,8 @@
 body {
-    margin: 0px;
-    font-family: 'Lato', sans-serif;
-    
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    justify-content: center;
+    display:grid;
 }
 
 * {
@@ -22,7 +23,8 @@ a {
     background-color: peachpuff;
 }
 
-.loading, .error {
+.error, 
+.loading {
     margin: 22px;
     text-align: center;
 }
@@ -31,34 +33,31 @@ a {
     color: red;
 }
 
-.home-buttons-wrapper {
-    display: flex;
-    justify-content: space-between;
+// .home-buttons-wrapper {
+//     display: flex;
+//     justify-content: space-between;
 
-    a {
-        border-radius: 5px;
-        padding: 10px;
-        width: 135px;
-        text-align: center;
-        
-    }
-}
+//     a {
+//         border-radius: 5px;
+//         padding: 10px;
+//         width: 135px;
+//         text-align: center;
+//     }
+// }
 
 button {
     font-size: 18px;
     padding: 15px 20px;
-    margin-top: 40px;
+    margin-top: 74gipx;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 2px 2px 12px rgba(0,0,0,.2);
-    transition: transform .3s;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
-
 button:hover {
     transform: scale(1.125);
 }
-
 @keyframes fade {
     0% {
         opacity: 0;
@@ -69,10 +68,15 @@ button:hover {
 }
 
 .fade-animation {
-    animation: fade .5s;
+    animation: fade 0.5s;
 }
 
 .fortune-text {
     display: flex;
     justify-content: center;
+
+    .h4 {
+        align-items: center;
+        justify-content: space-around;
+    }
 }

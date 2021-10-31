@@ -53,17 +53,15 @@ getFortune = () =>  {
 
 render() {
     return (
-        <body>
-        <div className="home-buttons-wrapper">
-            
-            <button onClick={this.getFortune}>Your Fortune</button>
-            
-            
-        </div>
-        <div className="fortune-text">
-        <h5>{this.state.fortune}</h5>
-        </div>
-        </body>
+        <div className="test">
+            <div className="center">
+                <button onClick={this.getFortune}>Your Fortune</button>
+            </div>
+            <div className="center">
+                <h4>{this.state.fortune}</h4>
+            </div>
+        </div> 
+       
     )
 }
 }
